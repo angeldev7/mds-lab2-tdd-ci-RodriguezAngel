@@ -31,4 +31,13 @@ public class StringCalculatorTest {
 		assertEquals(3, calc.add("1,2"));
 		assertEquals(10, calc.add("4,6"));
 	}
+	
+	// ========== ITERACIÓN 4: N números (cantidad variable) ==========
+	@Test
+	public void testCantidadVariableDeNumeros() {
+		StringCalculator calc = new StringCalculator();
+		assertEquals(6, calc.add("1,2,3"));
+		assertEquals(15, calc.add("1,2,3,4,5"));
+		assertEquals(10, calc.add("2,2,2,2,2"));
+	}
 }

@@ -10,6 +10,7 @@ public class StringCalculator {
 	 * ITERACIÓN 1: Cadena vacía retorna 0
 	 * ITERACIÓN 2: Un número retorna ese número
 	 * ITERACIÓN 3: Dos números separados por coma
+	 * ITERACIÓN 4: N números (cantidad variable)
 	 */
 	public int add(String numbers) {
 		if (numbers.isEmpty()) {
