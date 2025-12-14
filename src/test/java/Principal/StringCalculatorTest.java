@@ -23,4 +23,12 @@ public class StringCalculatorTest {
 		assertEquals(1, calc.add("1"));
 		assertEquals(5, calc.add("5"));
 	}
+	
+	// ========== ITERACIÓN 3: Dos números separados por coma ==========
+	@Test
+	public void testDosNumerosSeparadosPorComa() {
+		StringCalculator calc = new StringCalculator();
+		assertEquals(3, calc.add("1,2"));
+		assertEquals(10, calc.add("4,6"));
+	}
 }
