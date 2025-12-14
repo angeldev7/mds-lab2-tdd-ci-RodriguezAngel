@@ -56,4 +56,21 @@ public class StringCalculatorTest {
 		assertEquals(3, calc.add("//;\n1;2"));
 		assertEquals(10, calc.add("//|\n1|2|3|4"));
 	}
+	
+	// ========== ITERACIÓN 7: Números negativos lanzan excepción ==========
+	@Test
+	public void testNumerosNegativosLanzanExcepcion() {
+		StringCalculator calc = new StringCalculator();
+		
+		Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+			calc.add("1,-2,3");
+		});
+		assertTrue(exception.getMessage().contains("-2"));
+		
+		exception = assertThrows(IllegalArgumentException.class, () -> {
+			calc.add("1,-2,-3,4");
+		});
+		assertTrue(exception.getMessage().contains("-2"));
+		assertTrue(exception.getMessage().contains("-3"));
+	}
 }

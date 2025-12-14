@@ -13,6 +13,7 @@ public class StringCalculator {
 	 * ITERACIÓN 4: N números (cantidad variable)
 	 * ITERACIÓN 5: Saltos de línea como separador
 	 * ITERACIÓN 6: Delimitador personalizado
+	 * ITERACIÓN 7: Números negativos lanzan excepción
 	 */
 	public int add(String numbers) {
 		if (numbers.isEmpty()) {
@@ -31,10 +32,21 @@ public class StringCalculator {
 		}
 		
 		String[] nums = numStr.split(delimiter);
+		java.util.List<Integer> negatives = new java.util.ArrayList<>();
 		int sum = 0;
+		
 		for (String num : nums) {
-			sum += Integer.parseInt(num);
+			int value = Integer.parseInt(num);
+			if (value < 0) {
+				negatives.add(value);
+			}
+			sum += value;
 		}
+		
+		if (!negatives.isEmpty()) {
+			throw new IllegalArgumentException("Negativos no permitidos: " + negatives);
+		}
+		
 		return sum;
 	}
 }
