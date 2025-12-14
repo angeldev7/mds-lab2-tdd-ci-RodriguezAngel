@@ -6,6 +6,10 @@ package Principal;
  */
 public class StringCalculator {
 	
-	// Método add() se implementará iterativamente con TDD
-	
+	/**
+	 * ITERACIÓN 1: Cadena vacía retorna 0
+	 */
+	public int add(String numbers) {
+		return 0;
+	}
 }
