@@ -13,7 +13,7 @@ public class StringCalculatorTest {
 	@Test
 	public void testCadenaVaciaRetornaCero() {
 		StringCalculator calc = new StringCalculator();
-		assertEquals(99, calc.add("")); // ROMPER TEST A PROPÓSITO PARA CI
+		assertEquals(0, calc.add(""));
 	}
 	
 	// ========== ITERACIÓN 2: Un número retorna ese número ==========
