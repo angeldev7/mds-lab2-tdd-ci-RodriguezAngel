@@ -8,8 +8,12 @@ public class StringCalculator {
 	
 	/**
 	 * ITERACIÓN 1: Cadena vacía retorna 0
+	 * ITERACIÓN 2: Un número retorna ese número
 	 */
 	public int add(String numbers) {
-		return 0;
+		if (numbers.isEmpty()) {
+			return 0;
+		}
+		return Integer.parseInt(numbers);
 	}
 }

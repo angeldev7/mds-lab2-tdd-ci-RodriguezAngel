@@ -15,4 +15,12 @@ public class StringCalculatorTest {
 		StringCalculator calc = new StringCalculator();
 		assertEquals(0, calc.add(""));
 	}
+	
+	// ========== ITERACIÓN 2: Un número retorna ese número ==========
+	@Test
+	public void testUnNumeroRetornaEseNumero() {
+		StringCalculator calc = new StringCalculator();
+		assertEquals(1, calc.add("1"));
+		assertEquals(5, calc.add("5"));
+	}
 }
