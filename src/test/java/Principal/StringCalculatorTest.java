@@ -40,4 +40,12 @@ public class StringCalculatorTest {
 		assertEquals(15, calc.add("1,2,3,4,5"));
 		assertEquals(10, calc.add("2,2,2,2,2"));
 	}
+	
+	// ========== ITERACIÓN 5: Saltos de línea como separador ==========
+	@Test
+	public void testSaltosDeLineaComoSeparador() {
+		StringCalculator calc = new StringCalculator();
+		assertEquals(6, calc.add("1\n2,3"));
+		assertEquals(10, calc.add("1\n2\n3\n4"));
+	}
 }
